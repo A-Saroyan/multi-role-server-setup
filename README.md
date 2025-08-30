@@ -10,7 +10,7 @@ The playbook creates sudo users, configures Nginx, and installs useful utilities
 ## 🗂 Directory Structure
 
 ```
-27-08/
+ansible/
 ├── hosts.ini              # Hosts and groups
 ├── site.yml               # Main playbook
 ├── roles/
