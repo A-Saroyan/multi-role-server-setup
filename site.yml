@@ -1,0 +1,11 @@
+---
+- hosts: webserver
+  become: yes
+  roles:
+    - users
+    - nginx
+
+- hosts: utils
+  become: yes
+  roles:
+    - utils

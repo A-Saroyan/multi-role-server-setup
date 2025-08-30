@@ -1,0 +1,8 @@
+---
+- name: Install utilities
+  apt:
+    name:
+      - btop
+      - sl
+    state: present
+    update_cache: yes

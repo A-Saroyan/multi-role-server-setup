@@ -1,0 +1,16 @@
+---
+- name: Create sudo users with home directories
+  user:
+    name: "{{ item.name }}"
+    groups: "{{ item.groups }}"
+    shell: /bin/bash
+    create_home: yes
+    state: present
+  loop: "{{ users_list }}"
+
+- name: Allow users passwordless sudo
+  copy:
+    dest: "/etc/sudoers.d/{{ item.name }}"
+    content: "{{ item.name }} ALL=(ALL) NOPASSWD:ALL"
+    mode: 0440
+  loop: "{{ users_list }}"

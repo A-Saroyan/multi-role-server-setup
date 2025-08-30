@@ -1,0 +1,4 @@
+users_list:
+  - { name: "dev-1", groups: "sudo" }
+  - { name: "dev-2", groups: "sudo" }
+  - { name: "dev-3", groups: "sudo" }
